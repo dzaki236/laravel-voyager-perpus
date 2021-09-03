@@ -42,7 +42,6 @@ CREATE TABLE `buku` (
 --
 
 /*!40000 ALTER TABLE `buku` DISABLE KEYS */;
-INSERT INTO `buku` VALUES (1,2,'112232sds3','Buku2',NULL,'Adit',12,'[]','2021-08-29 02:21:00','2021-08-29 02:21:00'),(2,2,'123asr4','Buku1','buku/August2021/7I6MNfouq6ERB4sMEe7n.jpg','Andi',10,'[{\"download_link\":\"buku\\/August2021\\/H4hUiSx7vEkcbIlDAXVE.doc\",\"original_name\":\"Modul 1_Writing a report.doc\"}]','2021-08-29 02:26:40','2021-08-29 02:26:40');
 /*!40000 ALTER TABLE `buku` ENABLE KEYS */;
 
 --
@@ -194,7 +193,6 @@ CREATE TABLE `kelas` (
 --
 
 /*!40000 ALTER TABLE `kelas` DISABLE KEYS */;
-INSERT INTO `kelas` VALUES (1,'A001','Rekayasa Perangkat Lunak','12 RPL 2','Ruang 24','2021-08-29 02:35:54','2021-08-29 02:35:54'),(2,'A002','Rekayasa Perangkat Lunak','11 RPL 3','Ruang 24','2021-08-29 02:36:30','2021-08-29 02:36:30'),(3,'A003','Broadcasting','12 BC 3','Ruang 14','2021-08-29 02:54:13','2021-08-29 02:54:13');
 /*!40000 ALTER TABLE `kelas` ENABLE KEYS */;
 
 --
@@ -217,7 +215,7 @@ CREATE TABLE `main_transaction` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -225,7 +223,6 @@ CREATE TABLE `main_transaction` (
 --
 
 /*!40000 ALTER TABLE `main_transaction` DISABLE KEYS */;
-INSERT INTO `main_transaction` VALUES (1,1,2,1,'2021-08-29 00:00:00',1,'2021-08-30 00:00:00',NULL,NULL,'2021-08-29 03:04:36','2021-08-29 03:04:36');
 /*!40000 ALTER TABLE `main_transaction` ENABLE KEYS */;
 
 --
@@ -252,7 +249,7 @@ CREATE TABLE `menu_items` (
   PRIMARY KEY (`id`),
   KEY `menu_items_menu_id_foreign` (`menu_id`),
   CONSTRAINT `menu_items_menu_id_foreign` FOREIGN KEY (`menu_id`) REFERENCES `menus` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -260,7 +257,7 @@ CREATE TABLE `menu_items` (
 --
 
 /*!40000 ALTER TABLE `menu_items` DISABLE KEYS */;
-INSERT INTO `menu_items` VALUES (1,1,'Dashboard','','_self','voyager-boat',NULL,NULL,1,'2021-08-29 02:03:13','2021-08-29 02:03:13','voyager.dashboard',NULL),(2,1,'Media','','_self','voyager-images',NULL,NULL,5,'2021-08-29 02:03:13','2021-08-29 02:03:13','voyager.media.index',NULL),(3,1,'Users','','_self','voyager-person',NULL,NULL,3,'2021-08-29 02:03:13','2021-08-29 02:03:13','voyager.users.index',NULL),(4,1,'Roles','','_self','voyager-lock',NULL,NULL,2,'2021-08-29 02:03:13','2021-08-29 02:03:13','voyager.roles.index',NULL),(5,1,'Tools','','_self','voyager-tools',NULL,NULL,9,'2021-08-29 02:03:13','2021-08-29 02:03:13',NULL,NULL),(6,1,'Menu Builder','','_self','voyager-list',NULL,5,10,'2021-08-29 02:03:13','2021-08-29 02:03:13','voyager.menus.index',NULL),(7,1,'Database','','_self','voyager-data',NULL,5,11,'2021-08-29 02:03:13','2021-08-29 02:03:13','voyager.database.index',NULL),(8,1,'Compass','','_self','voyager-compass',NULL,5,12,'2021-08-29 02:03:13','2021-08-29 02:03:13','voyager.compass.index',NULL),(9,1,'BREAD','','_self','voyager-bread',NULL,5,13,'2021-08-29 02:03:13','2021-08-29 02:03:13','voyager.bread.index',NULL),(10,1,'Settings','','_self','voyager-settings',NULL,NULL,14,'2021-08-29 02:03:13','2021-08-29 02:03:13','voyager.settings.index',NULL),(11,1,'Hooks','','_self','voyager-hook',NULL,5,13,'2021-08-29 02:03:14','2021-08-29 02:03:14','voyager.hooks',NULL),(12,1,'Jenis Buku','','_self','voyager-documentation',NULL,NULL,15,'2021-08-29 02:13:07','2021-08-29 02:13:07','voyager.jenis-buku.index',NULL),(13,1,'Buku','','_self','voyager-book',NULL,NULL,16,'2021-08-29 02:19:44','2021-08-29 02:19:44','voyager.buku.index',NULL),(14,1,'Kelas','','_self','voyager-study',NULL,NULL,17,'2021-08-29 02:35:20','2021-08-29 02:35:20','voyager.kelas.index',NULL),(16,1,'Siswa','','_self','voyager-group',NULL,NULL,18,'2021-08-29 02:50:08','2021-08-29 02:50:08','voyager.siswa.index',NULL),(17,1,'Main Transaction','','_self','voyager-window-list',NULL,NULL,19,'2021-08-29 03:01:26','2021-08-29 03:01:26','voyager.main-transaction.index',NULL);
+INSERT INTO `menu_items` VALUES (1,1,'Dashboard','','_self','voyager-boat',NULL,NULL,1,'2021-08-29 02:03:13','2021-08-29 02:03:13','voyager.dashboard',NULL),(2,1,'Media','','_self','voyager-images',NULL,NULL,4,'2021-08-29 02:03:13','2021-08-30 00:54:01','voyager.media.index',NULL),(3,1,'Users','','_self','voyager-person',NULL,NULL,3,'2021-08-29 02:03:13','2021-08-29 02:03:13','voyager.users.index',NULL),(4,1,'Roles','','_self','voyager-lock',NULL,NULL,2,'2021-08-29 02:03:13','2021-08-29 02:03:13','voyager.roles.index',NULL),(5,1,'Tools','','_self','voyager-tools',NULL,NULL,5,'2021-08-29 02:03:13','2021-08-30 00:54:01',NULL,NULL),(6,1,'Menu Builder','','_self','voyager-list',NULL,5,1,'2021-08-29 02:03:13','2021-08-30 00:54:01','voyager.menus.index',NULL),(7,1,'Database','','_self','voyager-data',NULL,5,2,'2021-08-29 02:03:13','2021-08-30 00:54:01','voyager.database.index',NULL),(8,1,'Compass','','_self','voyager-compass',NULL,5,3,'2021-08-29 02:03:13','2021-08-30 00:54:01','voyager.compass.index',NULL),(9,1,'BREAD','','_self','voyager-bread',NULL,5,4,'2021-08-29 02:03:13','2021-08-30 00:54:01','voyager.bread.index',NULL),(10,1,'Settings','','_self','voyager-settings',NULL,NULL,6,'2021-08-29 02:03:13','2021-08-30 00:54:01','voyager.settings.index',NULL),(11,1,'Hooks','','_self','voyager-hook',NULL,5,5,'2021-08-29 02:03:14','2021-08-30 00:54:01','voyager.hooks',NULL),(12,1,'Jenis Buku','','_self','voyager-documentation',NULL,18,2,'2021-08-29 02:13:07','2021-08-30 00:55:20','voyager.jenis-buku.index',NULL),(13,1,'Buku','','_self','voyager-book',NULL,18,1,'2021-08-29 02:19:44','2021-08-30 00:55:20','voyager.buku.index',NULL),(14,1,'Kelas','','_self','voyager-study',NULL,18,4,'2021-08-29 02:35:20','2021-08-30 00:55:27','voyager.kelas.index',NULL),(16,1,'Siswa','','_self','voyager-group',NULL,18,3,'2021-08-29 02:50:08','2021-08-30 00:55:24','voyager.siswa.index',NULL),(17,1,'Main Transaction','','_self','voyager-window-list',NULL,18,5,'2021-08-29 03:01:26','2021-08-30 00:55:29','voyager.main-transaction.index',NULL),(18,1,'Data Master','','_self','voyager-data','#000000',NULL,7,'2021-08-30 00:53:49','2021-08-30 01:04:14',NULL,'');
 /*!40000 ALTER TABLE `menu_items` ENABLE KEYS */;
 
 --
@@ -356,7 +353,7 @@ CREATE TABLE `permission_role` (
 --
 
 /*!40000 ALTER TABLE `permission_role` DISABLE KEYS */;
-INSERT INTO `permission_role` VALUES (1,1),(2,1),(3,1),(4,1),(5,1),(6,1),(7,1),(8,1),(9,1),(10,1),(11,1),(12,1),(13,1),(14,1),(15,1),(16,1),(17,1),(18,1),(19,1),(20,1),(21,1),(22,1),(23,1),(24,1),(25,1),(26,1),(27,1),(27,3),(28,1),(28,3),(29,1),(29,3),(30,1),(30,3),(31,1),(31,3),(32,1),(32,3),(33,1),(33,3),(34,1),(34,3),(35,1),(35,3),(36,1),(36,3),(37,1),(37,3),(38,1),(38,3),(39,1),(39,3),(40,1),(40,3),(41,1),(41,3),(47,1),(48,1),(49,1),(50,1),(51,1),(52,1),(52,3),(53,1),(53,3),(54,1),(54,3),(55,1),(55,3),(56,1),(56,3);
+INSERT INTO `permission_role` VALUES (1,1),(1,3),(2,1),(3,1),(4,1),(5,1),(6,1),(7,1),(8,1),(9,1),(10,1),(11,1),(12,1),(13,1),(14,1),(15,1),(16,1),(17,1),(18,1),(19,1),(20,1),(21,1),(22,1),(23,1),(24,1),(25,1),(26,1),(27,1),(27,3),(28,1),(28,3),(29,1),(29,3),(30,1),(30,3),(31,1),(31,3),(32,1),(32,3),(33,1),(33,3),(34,1),(34,3),(35,1),(35,3),(36,1),(36,3),(37,1),(38,1),(39,1),(40,1),(41,1),(47,1),(48,1),(49,1),(50,1),(51,1),(52,1),(52,3),(53,1),(53,3),(54,1),(54,3),(55,1),(55,3),(56,1),(56,3);
 /*!40000 ALTER TABLE `permission_role` ENABLE KEYS */;
 
 --
@@ -438,7 +435,7 @@ CREATE TABLE `roles` (
 --
 
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
-INSERT INTO `roles` VALUES (1,'admin','Administrator','2021-08-29 02:03:13','2021-08-29 02:03:13'),(2,'user','Normal User','2021-08-29 02:03:13','2021-08-29 02:03:13'),(3,'petugas','petugas','2021-08-29 03:05:40','2021-08-29 03:08:08');
+INSERT INTO `roles` VALUES (1,'admin','Administrator','2021-08-29 02:03:13','2021-08-29 02:03:13'),(2,'user','Normal User','2021-08-29 02:03:13','2021-08-29 02:03:13'),(3,'petugas','Petugas','2021-08-29 03:05:40','2021-08-30 01:00:00');
 /*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 
 --
@@ -500,7 +497,6 @@ CREATE TABLE `siswa` (
 --
 
 /*!40000 ALTER TABLE `siswa` DISABLE KEYS */;
-INSERT INTO `siswa` VALUES (1,1,'12345','12345','Dzaki Ahnaf Z','Jalan ABC','aktif','2021-08-29','2021-08-29','25bc6v','2021-08-29 02:53:19','2021-08-29 02:53:19');
 /*!40000 ALTER TABLE `siswa` ENABLE KEYS */;
 
 --
@@ -599,4 +595,4 @@ INSERT INTO `users` VALUES (1,1,'admin','admin@admin.com','users/default.png',NU
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-08-29 17:13:22
+-- Dump completed on 2021-09-03 21:19:15
